@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 0 36px 0 36px;
+  align-items: center;
+  height: 70px;
+  position: relative;
+  z-index: 100;
+  box-shadow:  0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.header-logo {
+  padding: 10px 0;
+}
+
+.header-logo-img-pc {
+  height: 20px;
+  width: auto;
+  display: block;
+}
+
+.header-logo-img:hover {
+  opacity: 0.7;
+}
+
+
+.header-logo-img-sp {
+  display: none;
+}
+
+
+
+/* ここから右側のリストメニュー */
+.header-navi-list {
+  display: inline-flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.li-conts {
+  text-align: center;
+  margin-right: 45px;
+}
+
+.li-conts,.header-logo-img {
+  transition: opacity 0.2s ease;
+}
+
+.li-conts:hover {
+  opacity: 0.7;
+}
+
+.li-conts > a {
+  text-decoration: none;
+  color: #333;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 0;
+
+}
+
+
+
+.special {
+  background-color: #F79214;
+  border: none;
+  border-radius: 9999px;  /* border-radius は9999pxにすると綺麗な長円形になる */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 12px;
+  height: 40px;
+  padding: 0 20px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+.special a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+
+
+.en-text, .jn-text {
+  display: block;
+  /* block; <br>ではなく、ブロックにすることで縦にならばせる。 */
+  margin: 0;
+  padding: 0;
+  line-height: 1.5; /* 適宜調整 */
+  color: #333;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.en-text {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 14.4px;
+  text-align: center;
+}
+
+
+.header-nav-humburger {
+  display: none;
+}
+
+.menu-button-container {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* ハンバーガーメニューの変形: バツの形 */
+#menu-toggle:checked + .menu-button-container.header-humburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-button-container.header-humburger-line:nth-child(2) {
+  opacity: 0; /* 中央の線を消す */
+}
+
+#menu-toggle:checked + .menu-button-container.header-humburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+/* ここからメインコンテンツ */
+
+main {
+  display: block;
+}
+
+.first-view {
+  box-sizing: border-box;
+  height: 739px;
+  display: flex;
+  width: 100%;
+  z-index: 0;
+  position: relative;
+}
+
+.first-view-common {
+  position: absolute;
+  z-index: -1;
+}
+
+
+.first-view-whole-img {
+  display: none;
+}
+
+
+.first-view-img-left-rectangle {
+  top: -70px;
+  left: 0;
+  object-fit: cover;
+
+}
+
+.first-view-img-fill-rectangle {
+  top: 84px;
+  left: -70px;
+}
+
+
+
+
+
+
+
+.first-view-img-main-visual {
+  width: 775px;
+  top: -70px;
+  right: 0;
+  z-index: 1;
+}
+
+.first-view-img-right-rectangle {
+  right: 0;
+  bottom: 70px;
+}
+
+
+
+
+
+
+
+
+
+.first-view-content {
+  padding-top: 219px;
+  width: 1040px;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 2;
+  position: relative;
+
+}
+
+.inner {
+  width: fit-content;
+  position: relative;
+}
+
+.first-view-title {
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 63px;
+  margin-bottom: 16px;
+}
+
+.first-view-btn {
+  align-items: center;
+  background-color: #F79214;
+  border: none;
+  border-radius: 9999px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  /* flex-direction: column; */
+  font-size: 16px;
+  font-weight: 700;
+  height: 64px;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.first-view-btn:hover {
+  opacity: 0.7;
+}
+
+.first-view-survey {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.first-view-survey {
+  font-size: 12px;
+  line-height: 16px;  
+}
+
+
+
+.first-view-img-badge {
+  position: absolute;
+  top: -105px;
+  right: -150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fixed-img {
+  max-width: 375px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 4px;
+}
+
+.tamesi {
+  background-color: rgb(236, 236, 236);
+  height: 1000px;
+}
+
+
+
